@@ -1,0 +1,88 @@
+
+
+//Patrón de comportamiento Strategy
+public interface EstrategiaDeComparacion{
+    bool sosIgual(Alumno comparable, Alumno comparable1);
+    bool sosMenor(Alumno comparable, Alumno comparable1);
+    bool sosMayor(Alumno comparable, Alumno comparable1);
+}
+
+public class porPromedio : EstrategiaDeComparacion {
+    public bool sosIgual(Alumno comparable, Alumno comparable1){
+        return comparable.promedio == comparable1.getPromedio();
+    }
+    public bool sosMenor(Alumno comparable, Alumno comparable1){
+        return comparable.promedio < comparable1.getPromedio();
+    }
+    public bool sosMayor(Alumno comparable, Alumno comparable1){
+        return comparable.promedio > comparable1.getPromedio();
+    }
+}
+
+//clase
+public class Alumno : Persona {
+    int legajo;
+    double promedio;
+    private EstrategiaDeComparacion estrategiaActual;
+
+    public overide sosIgual(Comparable c){
+        return estrategiaActual.sosIgual(this, (Alumno)c);
+    }
+}
+
+//constructor
+public class Alumno : Persona {
+    EstrategiaDeComparacion estategia = new porPromedio();
+    public void setEstrategiaActual(EstrategiaDeComparacion estrategia){
+    }
+}
+
+//Patrón de comportamiento Iterator
+
+/*
+    Ejercicio 6
+*/
+
+//interface Iterator
+
+static int Main(string[] args){
+    
+static void imprimir(Coleccionable col){
+    Iterator ite = col.crearIterador();
+    ite.Primero();
+    while(!ite.Fin()){
+        Console.log(ite.Actual());
+        ite.Siguiente();
+    }
+}
+}
+public class Iterator{
+    void primero();
+    void siguiente();
+    bool fin();
+    Iterable actual();
+}
+
+public class IteradorDeLista : Iterator{
+    private int indice;
+    private List list;
+    public void Primero(){
+        this.indice = 0;
+    }
+    public void Siguiente(){
+        this.indice++;
+    }
+    public bool Fin(){
+        return this.indice == lista.Count;
+    }
+    public Iterable Actual(){
+        return this.lista[indice];
+    }
+}
+
+
+public class Pila : Coleccionable, Iterable {
+    public Iterator crearIterador(){
+        return new IteradorDeLista();
+    }
+}
