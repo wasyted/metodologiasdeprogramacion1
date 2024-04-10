@@ -1,0 +1,6 @@
+for(i hasta 20)
+  professorGoToClass(alu2)
+
+IAlumno alu = new Alumno()
+IAlumno alu2 = new Alumno(alu)
+IAlumno alu3 = new Alumno(alu2)
