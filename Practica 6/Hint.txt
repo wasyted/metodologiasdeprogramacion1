@@ -1,0 +1,41 @@
+AlumnoAdaptado > AlumnoProxy > decorador1 > decorador2 > | AlumnoCompuesto | > Alumno
+                                                            |
+                                                            Agregar antes de llamar la clase Alumno
+//Main práctica 5
+
+program{
+    Teacher profesor = new Teacher();
+    for(int i; i < 10; i++){
+        Ialumno proxy = new AlumnoProxy("Matías");
+        Student estudiante = new AlumnoAdaptado(proxy);
+        profesor.goToClass(estudiante);
+    }
+    profesor.teachingACLass();
+}
+
+//fabrica de alumnos decorados
+
+public class FabricaDeDecorados : FabricaDeAlumno{
+    public Comparable crearAleatorio(){
+        Ialumno a = fabrica...crearAleatorio(1);
+        Ialumno alumnoDecorado1 = new decoradoConLegajo(a);
+        Ialumno alumnoDecorado2 = new decoradoConLetras(alumnoDecorado1);
+    }
+    return decorado;
+}
+
+//fabrica de alumnos compuestos y decorados
+
+public class FabricaDeDecorados : FabricaDeAlumno{
+    public Comparable crearAleatorio(){
+        Ialumno compuesto = new AlumnoCompuesto();
+        for(int i = 0; i < 5; i++){
+            Ialumno a = fabrica...crearAleatorio(1);
+            compuesto.agregarHijo(a);
+        }
+        Ialumno alumnoDecorado1 = new decoradoConLegajo(compuesto);
+        Ialumno alumnoDecorado2 = new decoradoConLetras(alumnoDecorado1);
+
+        return compuesto;
+    }
+}
