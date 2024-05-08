@@ -1,0 +1,6 @@
+C:\Users\laboratorio\Documents\SharpDevelop Projects\MDP1\MDP1\obj\Debug\MDP1.csprojResolveAssemblyReference.cache
+C:\Users\laboratorio\Documents\SharpDevelop Projects\MDP1\MDP1\bin\Debug\MDP1.exe.config
+C:\Users\laboratorio\Documents\SharpDevelop Projects\MDP1\MDP1\bin\Debug\MDP1.exe
+C:\Users\laboratorio\Documents\SharpDevelop Projects\MDP1\MDP1\bin\Debug\MDP1.pdb
+C:\Users\laboratorio\Documents\SharpDevelop Projects\MDP1\MDP1\obj\Debug\MDP1.exe
+C:\Users\laboratorio\Documents\SharpDevelop Projects\MDP1\MDP1\obj\Debug\MDP1.pdb
